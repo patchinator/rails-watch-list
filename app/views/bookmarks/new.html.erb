@@ -1,6 +1,6 @@
 <h1><%= "Add a bookmark to #{@list.name}" %></h1>
 
-<%= simple_form_for [ @bookmark, @list ] do |f| %>
+<%= simple_form_for [ @list, @bookmark ] do |f| %>
   <%= f.association :movie, prompt: "Select a movie" %>
   <%= f.input :comment, placeholder: "Comment on the movie" %>
   <%= f.submit %>
